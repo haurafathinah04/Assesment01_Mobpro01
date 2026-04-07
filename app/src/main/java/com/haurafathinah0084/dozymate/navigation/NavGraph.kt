@@ -5,7 +5,6 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.haurafathinah0084.dozymate.MainScreen
 
 @Composable
 fun SetupNavGraph(navController: NavHostController = rememberNavController()) {
@@ -16,6 +15,10 @@ fun SetupNavGraph(navController: NavHostController = rememberNavController()) {
     ) {
         composable(Screen.Home.route) {
             MainScreen(navController)
+        }
+
+        composable(Screen.Tips.route) {
+            TipsScreen(navController)
         }
     }
 }

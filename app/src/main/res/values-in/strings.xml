@@ -72,4 +72,46 @@ Durasi tidur berlebih.
 Kurangi tidur siang dan tingkatkan
 aktivitas pagi hari.
 </string>
+    <string name="tips">Tips Tidur</string>
+    <string name="tips_app">
+DozyMate adalah aplikasi untuk menghitung durasi tidur
+berdasarkan kategori usia. Aplikasi ini membantu pengguna
+mengetahui apakah waktu tidurnya cukup, kurang, atau berlebih.
+
+Aplikasi juga memberikan saran dan tips untuk meningkatkan
+kualitas tidur dan menjaga kesehatan tubuh.
+</string>
+
+    <string name="manfaat">Manfaat Tidur Cukup</string>
+    <string name="manfaat_tidur">
+• Meningkatkan konsentrasi\n
+• Menjaga stamina tubuh\n
+• Memperbaiki suasana hati\n
+• Meningkatkan kinerja otak\n
+• Menjaga sistem imun\n
+• Mengurangi stres\n
+• Meningkatkan daya ingat\n
+• Membantu pemulihan tubuh\n
+• Meningkatkan produktivitas\n
+• Menjaga kesehatan jantung
+</string>
+
+    <string name="tips_baik">Tips Tidur Nyenyak</string>
+    <string name="tips_tips">
+• Tidur pada jam yang sama setiap hari\n
+• Hindari HP sebelum tidur\n
+• Kurangi cahaya biru layar\n
+• Matikan lampu kamar\n
+• Hindari kafein malam hari\n
+• Lakukan relaksasi sebelum tidur\n
+• Mandi air hangat\n
+• Gunakan bantal nyaman\n
+• Hindari makan berat malam hari\n
+• Olahraga rutin\n
+• Kurangi tidur siang terlalu lama\n
+• Minum susu hangat\n
+• Membaca buku sebelum tidur\n
+• Atur suhu kamar nyaman\n
+• Hindari stres sebelum tidur
+</string>
 </resources>

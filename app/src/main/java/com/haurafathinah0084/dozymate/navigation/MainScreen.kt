@@ -1,4 +1,4 @@
-package com.haurafathinah0084.dozymate
+package com.haurafathinah0084.dozymate.navigation
 
 import android.content.Context
 import android.content.Intent
@@ -25,6 +25,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
+import com.haurafathinah0084.dozymate.R
 import com.haurafathinah0084.dozymate.ui.theme.DozyMateTheme
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -42,7 +43,7 @@ fun MainScreen(navController: NavHostController) {
                 ),
                 actions = {
                     IconButton(onClick = {
-
+                        navController.navigate(Screen.Tips.route)
                     }) {
                         Icon(
                             imageVector = Icons.Outlined.Info,

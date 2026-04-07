@@ -71,4 +71,44 @@ Sleep duration is excessive.
 Reduce naps and increase morning activities.
 Stay active during the day.
 </string>
+    <string name="tips">Sleep Tips</string>
+    <string name="tips_app">
+DozyMate is an application used to calculate sleep duration
+based on age category. This app helps users determine whether
+their sleep is sufficient, lacking, or excessive.
+
+The application also provides recommendations and tips to
+improve sleep quality and maintain overall health.
+</string>
+    <string name="manfaat">Benefits of Enough Sleep</string>
+    <string name="manfaat_tidur">
+• Improve concentration and focus\n
+• Maintain body stamina\n
+• Improve mood stability\n
+• Improve brain performance\n
+• Maintain immune system\n
+• Reduce stress and anxiety\n
+• Improve memory retention\n
+• Help body recovery\n
+• Improve productivity\n
+• Maintain heart health
+</string>
+    <string name="tips_baik">Tips for Better Sleep</string>
+    <string name="tips_tips">
+• Sleep at the same time every day\n
+• Avoid phone before sleeping\n
+• Reduce blue light exposure\n
+• Keep room dark and quiet\n
+• Avoid caffeine at night\n
+• Do relaxation before sleep\n
+• Take warm shower\n
+• Use comfortable pillow\n
+• Avoid heavy meals at night\n
+• Exercise regularly\n
+• Reduce long naps\n
+• Drink warm milk\n
+• Read book before sleep\n
+• Keep bedroom temperature comfortable\n
+• Avoid stress before sleeping
+</string>
 </resources>
