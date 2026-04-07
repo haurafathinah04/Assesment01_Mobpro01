@@ -2,44 +2,74 @@
 <resources>
     <string name="app_name">DozyMate</string>
     <string name="sleep_intro">
-Cek durasi tidur kamu untuk mengetahui apakah tidur kamu
-cukup, kurang, atau berlebih. Aplikasi ini juga memberikan
-tips kesehatan berdasarkan waktu tidur dan jenis kelamin.
+Cek durasi tidur berdasarkan kategori usia.
+Aplikasi ini membantu menentukan apakah tidur kamu
+cukup, kurang, atau berlebih serta memberikan tips kesehatan.
 </string>
-    <string name="mulai_tidur">Jam mulai tidur</string>
-    <string name="bangun_tidur">Jam bangun tidur</string>
-    <string name="pria">Laki-laki</string>
-    <string name="wanita">Perempuan</string>
+    <string name="mulai_tidur">Jam Mulai Tidur</string>
+    <string name="bangun_tidur">Jam Bangun</string>
+    <string name="kategori_usia">Kategori Usia</string>
+    <string name="anak">Anak-anak</string>
+    <string name="remaja">Remaja</string>
+    <string name="dewasa">Dewasa</string>
+    <string name="keterangan_usia">
+Anak-anak : 6 - 12 tahun
+Remaja : 13 - 18 tahun
+Dewasa : 19 - 60 tahun
+</string>
+    <string name="tips_aplikasi">Tips Tidur</string>
     <string name="hitung">Hitung</string>
+    <string name="reset">Reset</string>
     <string name="bagikan">Bagikan</string>
+    <string name="durasi">Durasi Tidur :</string>
+    <string name="kategori">Kategori :</string>
+    <string name="kurang">Kurang</string>
+    <string name="cukup">Cukup</string>
+    <string name="berlebih">Berlebih</string>
     <string name="input_invalid">Input tidak boleh kosong</string>
-    <string name="tips">Tips Tidur</string>
-    <string name="tips_app">
-DozyMate adalah aplikasi untuk menghitung durasi tidur pengguna.
-Aplikasi ini membantu pengguna mengetahui apakah tidurnya
-cukup, kurang, atau berlebih.
-
-Dengan menggunakan aplikasi ini, pengguna dapat memperbaiki
-kualitas tidur dan menjaga kesehatan tubuh.
+    <string name="tips_anak_kurang">
+Anak-anak membutuhkan 9-11 jam tidur.
+Tidur lebih awal, hindari gadget sebelum tidur,
+dan buat jadwal tidur teratur.
 </string>
-    <string name="sleep_benefit">
-Manfaat tidur yang cukup:
-
-• Meningkatkan konsentrasi
-• Menjaga stamina tubuh
-• Memperbaiki suasana hati
-• Meningkatkan kinerja otak
-• Menjaga sistem imun
-• Mengurangi stres
+    <string name="tips_anak_cukup">
+Durasi tidur sudah baik untuk anak-anak.
+Pertahankan pola tidur ini agar pertumbuhan
+dan konsentrasi optimal.
 </string>
-    <string name="sleep_long_tips">
-Tips agar tidur lebih nyenyak:
-
-• Tidur di jam yang sama setiap hari
-• Hindari HP sebelum tidur
-• Matikan lampu kamar
-• Hindari kafein di malam hari
-• Gunakan bantal yang nyaman
-• Lakukan relaksasi sebelum tidur
+    <string name="tips_anak_lebih">
+Durasi tidur berlebih.
+Ajak anak lebih aktif dan kurangi tidur siang
+terlalu lama.
+</string>
+    <string name="tips_remaja_kurang">
+Remaja membutuhkan 8-10 jam tidur.
+Hindari begadang, kurangi penggunaan HP,
+dan tidur sebelum jam 11 malam.
+</string>
+    <string name="tips_remaja_cukup">
+Durasi tidur sudah ideal.
+Pertahankan jadwal tidur teratur
+agar lebih produktif.
+</string>
+    <string name="tips_remaja_lebih">
+Durasi tidur berlebih.
+Coba bangun lebih pagi dan lakukan
+aktivitas ringan.
+</string>
+    <string name="tips_dewasa_kurang">
+Dewasa membutuhkan 7-9 jam tidur.
+Hindari kafein malam hari, relaksasi sebelum tidur,
+dan kurangi penggunaan layar.
+</string>
+    <string name="tips_dewasa_cukup">
+Durasi tidur sudah ideal untuk dewasa.
+Pertahankan pola tidur sehat
+untuk menjaga kesehatan tubuh.
+</string>
+    <string name="tips_dewasa_lebih">
+Durasi tidur berlebih.
+Kurangi tidur siang dan tingkatkan
+aktivitas pagi hari.
 </string>
 </resources>

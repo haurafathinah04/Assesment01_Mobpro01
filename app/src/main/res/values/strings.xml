@@ -1,45 +1,74 @@
 <resources>
-
     <string name="app_name">DozyMate</string>
     <string name="sleep_intro">
-Check your sleep duration to know whether your sleep is enough,
-lack, or excessive. This app also provides health tips based
-on your sleep time and gender.
+Check your sleep duration based on age category.
+This app helps determine whether your sleep is enough,
+lack, or excessive and provides health tips.
 </string>
-    <string name="mulai_tidur">Sleep Start Time</string>
-    <string name="bangun_tidur">Wake Up Time</string>
-    <string name="pria">Male</string>
-    <string name="wanita">Female</string>
+    <string name="mulai_tidur">Sleep Time</string>
+    <string name="bangun_tidur">Wake Time</string>
+    <string name="kategori_usia">Age Category</string>
+    <string name="anak">Children</string>
+    <string name="remaja">Teenager</string>
+    <string name="dewasa">Adult</string>
+    <string name="keterangan_usia">
+Children : 6 - 12 years old
+Teenager : 13 - 18 years old
+Adult : 19 - 60 years old
+</string>
+    <string name="tips_aplikasi">Sleep Tips</string>
     <string name="hitung">Calculate</string>
+    <string name="reset">Reset</string>
     <string name="bagikan">Share</string>
+    <string name="durasi">Sleep Duration :</string>
+    <string name="kategori">Category :</string>
+    <string name="kurang">Lack</string>
+    <string name="cukup">Enough</string>
+    <string name="berlebih">Excessive</string>
     <string name="input_invalid">Input cannot be empty</string>
-    <string name="tips">Sleep Tips</string>
-    <string name="tips_app">
-DozyMate is an application used to calculate sleep duration.
-This app helps users know whether their sleep is sufficient,
-lack, or excessive.
-
-By using this app users can improve their sleep quality
-and maintain better health.
+    <string name="tips_anak_kurang">
+Children need 9-11 hours of sleep.
+Try sleeping earlier, avoid gadgets before sleep,
+and maintain consistent bedtime routine.
 </string>
-    <string name="sleep_benefit">
-Benefits of enough sleep:
-
-• Improve concentration
-• Maintain body stamina
-• Improve mood
-• Improve brain performance
-• Maintain immune system
-• Reduce stress
+    <string name="tips_anak_cukup">
+Sleep duration is good for children.
+Maintain this sleep pattern for optimal growth
+and better concentration.
 </string>
-    <string name="sleep_long_tips">
-Tips for better sleep:
-
-• Sleep at same time everyday
-• Avoid phone before sleep
-• Keep room dark
-• Avoid caffeine at night
-• Use comfortable pillow
-• Relax before sleep
+    <string name="tips_anak_lebih">
+Sleep duration is excessive.
+Encourage physical activity and reduce long naps
+during the day.
+</string>
+    <string name="tips_remaja_kurang">
+Teenagers need 8-10 hours sleep.
+Avoid staying up late, reduce phone usage,
+and sleep before 11 PM.
+</string>
+    <string name="tips_remaja_cukup">
+Sleep duration is ideal.
+Maintain consistent sleep schedule
+to improve productivity.
+</string>
+    <string name="tips_remaja_lebih">
+Sleep duration is excessive.
+Try waking up earlier and doing light exercise.
+Avoid long daytime sleep.
+</string>
+    <string name="tips_dewasa_kurang">
+Adults need 7-9 hours sleep.
+Avoid caffeine at night, relax before sleep,
+and reduce screen time.
+</string>
+    <string name="tips_dewasa_cukup">
+Sleep duration is ideal for adults.
+Maintain healthy sleep routine
+for better health.
+</string>
+    <string name="tips_dewasa_lebih">
+Sleep duration is excessive.
+Reduce naps and increase morning activities.
+Stay active during the day.
 </string>
 </resources>
