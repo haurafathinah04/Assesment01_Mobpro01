@@ -1,3 +1,45 @@
 <resources>
+
     <string name="app_name">DozyMate</string>
+    <string name="sleep_intro">
+Check your sleep duration to know whether your sleep is enough,
+lack, or excessive. This app also provides health tips based
+on your sleep time and gender.
+</string>
+    <string name="mulai_tidur">Sleep Start Time</string>
+    <string name="bangun_tidur">Wake Up Time</string>
+    <string name="pria">Male</string>
+    <string name="wanita">Female</string>
+    <string name="hitung">Calculate</string>
+    <string name="bagikan">Share</string>
+    <string name="input_invalid">Input cannot be empty</string>
+    <string name="tips">Sleep Tips</string>
+    <string name="tips_app">
+DozyMate is an application used to calculate sleep duration.
+This app helps users know whether their sleep is sufficient,
+lack, or excessive.
+
+By using this app users can improve their sleep quality
+and maintain better health.
+</string>
+    <string name="sleep_benefit">
+Benefits of enough sleep:
+
+• Improve concentration
+• Maintain body stamina
+• Improve mood
+• Improve brain performance
+• Maintain immune system
+• Reduce stress
+</string>
+    <string name="sleep_long_tips">
+Tips for better sleep:
+
+• Sleep at same time everyday
+• Avoid phone before sleep
+• Keep room dark
+• Avoid caffeine at night
+• Use comfortable pillow
+• Relax before sleep
+</string>
 </resources>
