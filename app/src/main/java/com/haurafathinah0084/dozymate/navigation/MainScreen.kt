@@ -3,6 +3,7 @@ package com.haurafathinah0084.dozymate.navigation
 import android.content.Context
 import android.content.Intent
 import android.content.res.Configuration
+import android.widget.Toast
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
@@ -188,7 +189,14 @@ fun ScreenContent(modifier: Modifier = Modifier) {
             Button(
                 onClick = {
 
-                    if (mulai.isEmpty() || bangun.isEmpty()) return@Button
+                    if (mulai.isEmpty() || bangun.isEmpty()) {
+                        Toast.makeText(
+                            context,
+                            context.getString(R.string.input_invalid),
+                            Toast.LENGTH_SHORT
+                        ).show()
+                        return@Button
+                    }
 
                     val startHour = mulai.substringBefore(":").toInt()
                     val endHour = bangun.substringBefore(":").toInt()
