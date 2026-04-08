@@ -3,7 +3,6 @@ package com.haurafathinah0084.dozymate.navigation
 import android.content.Context
 import android.content.Intent
 import android.content.res.Configuration
-import android.widget.Toast
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
@@ -36,21 +35,13 @@ fun MainScreen(navController: NavHostController) {
         topBar = {
             TopAppBar(
                 title = {
-                    Text(text = stringResource(id = R.string.app_name))
+                    Text(stringResource(R.string.app_name))
                 },
-                colors = TopAppBarDefaults.topAppBarColors(
-                    containerColor = MaterialTheme.colorScheme.primaryContainer,
-                    titleContentColor = MaterialTheme.colorScheme.primary,
-                ),
                 actions = {
                     IconButton(onClick = {
                         navController.navigate(Screen.Tips.route)
                     }) {
-                        Icon(
-                            imageVector = Icons.Outlined.Info,
-                            contentDescription = stringResource(R.string.tips_aplikasi),
-                            tint = MaterialTheme.colorScheme.primary
-                        )
+                        Icon(Icons.Outlined.Info, null)
                     }
                 }
             )
@@ -67,6 +58,9 @@ fun ScreenContent(modifier: Modifier = Modifier) {
     var mulai by rememberSaveable { mutableStateOf("") }
     var bangun by rememberSaveable { mutableStateOf("") }
 
+    var mulaiError by rememberSaveable { mutableStateOf(false) }
+    var bangunError by rememberSaveable { mutableStateOf(false) }
+
     var showStartPicker by remember { mutableStateOf(false) }
     var showEndPicker by remember { mutableStateOf(false) }
 
@@ -78,7 +72,7 @@ fun ScreenContent(modifier: Modifier = Modifier) {
 
     var usia by rememberSaveable { mutableStateOf(radioOptions[0]) }
 
-    var durasi by rememberSaveable { mutableStateOf(0) }
+    var durasi by rememberSaveable { mutableStateOf(0f) }
     var kategori by rememberSaveable { mutableStateOf("") }
     var tips by rememberSaveable { mutableStateOf("") }
 
@@ -117,7 +111,13 @@ fun ScreenContent(modifier: Modifier = Modifier) {
             value = mulai,
             onValueChange = {},
             readOnly = true,
+            isError = mulaiError,
             label = { Text(stringResource(R.string.mulai_tidur)) },
+            supportingText = {
+                if (mulaiError) {
+                    Text(stringResource(R.string.input_invalid))
+                }
+            },
             trailingIcon = {
                 IconButton(onClick = { showStartPicker = true }) {
                     Icon(Icons.Default.AccessTime, null)
@@ -130,7 +130,13 @@ fun ScreenContent(modifier: Modifier = Modifier) {
             value = bangun,
             onValueChange = {},
             readOnly = true,
+            isError = bangunError,
             label = { Text(stringResource(R.string.bangun_tidur)) },
+            supportingText = {
+                if (bangunError) {
+                    Text(stringResource(R.string.input_invalid))
+                }
+            },
             trailingIcon = {
                 IconButton(onClick = { showEndPicker = true }) {
                     Icon(Icons.Default.AccessTime, null)
@@ -189,23 +195,27 @@ fun ScreenContent(modifier: Modifier = Modifier) {
             Button(
                 onClick = {
 
-                    if (mulai.isEmpty() || bangun.isEmpty()) {
-                        Toast.makeText(
-                            context,
-                            context.getString(R.string.input_invalid),
-                            Toast.LENGTH_SHORT
-                        ).show()
-                        return@Button
-                    }
+                    mulaiError = mulai.isEmpty()
+                    bangunError = bangun.isEmpty()
+
+                    if (mulaiError || bangunError) return@Button
 
                     val startHour = mulai.substringBefore(":").toInt()
-                    val endHour = bangun.substringBefore(":").toInt()
+                    val startMinute = mulai.substringAfter(":").toInt()
 
-                    durasi =
-                        if (endHour >= startHour)
-                            endHour - startHour
+                    val endHour = bangun.substringBefore(":").toInt()
+                    val endMinute = bangun.substringAfter(":").toInt()
+
+                    val startTotal = startHour * 60 + startMinute
+                    val endTotal = endHour * 60 + endMinute
+
+                    val diffMinute =
+                        if (endTotal >= startTotal)
+                            endTotal - startTotal
                         else
-                            (24 - startHour) + endHour
+                            (24 * 60 - startTotal) + endTotal
+
+                    durasi = diffMinute / 60f
 
                     if (usia == radioOptions[0]) {
                         when {
@@ -269,9 +279,11 @@ fun ScreenContent(modifier: Modifier = Modifier) {
                     mulai = ""
                     bangun = ""
                     usia = radioOptions[0]
-                    durasi = 0
+                    durasi = 0f
                     kategori = ""
                     tips = ""
+                    mulaiError = false
+                    bangunError = false
                 },
                 modifier = Modifier.weight(1f)
             ) {
@@ -279,12 +291,12 @@ fun ScreenContent(modifier: Modifier = Modifier) {
             }
         }
 
-        if (durasi != 0) {
+        if (durasi != 0f) {
 
             HorizontalDivider()
 
             Text(
-                "${stringResource(R.string.durasi)} $durasi jam",
+                "${stringResource(R.string.durasi)} %.2f jam".format(durasi),
                 style = MaterialTheme.typography.titleMedium
             )
 
@@ -299,7 +311,7 @@ fun ScreenContent(modifier: Modifier = Modifier) {
                 onClick = {
                     shareData(
                         context,
-                        "$durasi jam\n$kategori\n$tips"
+                        "%.2f jam\n$kategori\n$tips".format(durasi)
                     )
                 },
                 modifier = Modifier.fillMaxWidth()
@@ -315,6 +327,7 @@ fun ScreenContent(modifier: Modifier = Modifier) {
             onConfirm = { h, m ->
                 mulai = "%02d:%02d".format(h, m)
                 showStartPicker = false
+                mulaiError = false
             }
         )
     }
@@ -325,6 +338,7 @@ fun ScreenContent(modifier: Modifier = Modifier) {
             onConfirm = { h, m ->
                 bangun = "%02d:%02d".format(h, m)
                 showEndPicker = false
+                bangunError = false
             }
         )
     }
